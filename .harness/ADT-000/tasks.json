@@ -1,0 +1,104 @@
+{
+  "ticket_id": "ADT-000",
+  "tasks": [
+    {
+      "id": "T1",
+      "title": "Scaffold ai-harness-demo with deps and README",
+      "requirement_ids": [
+        "R1"
+      ],
+      "acceptance_criteria_ids": [
+        "AC1",
+        "AC2",
+        "AC8"
+      ],
+      "depends_on": [],
+      "status": "VALIDATED",
+      "files_or_symbols": [
+        "ai-harness-demo/requirements.txt",
+        "ai-harness-demo/README.md"
+      ],
+      "validation_notes": "Create venv, pip install -r requirements.txt, confirm README run command matches layout.",
+      "needs_work_reason": ""
+    },
+    {
+      "id": "T2",
+      "title": "Implement web_scraper.py (3-5 items, <=140 char snippets)",
+      "requirement_ids": [
+        "R2"
+      ],
+      "acceptance_criteria_ids": [
+        "AC3",
+        "AC7"
+      ],
+      "depends_on": [
+        "T1"
+      ],
+      "status": "VALIDATED",
+      "files_or_symbols": [
+        "ai-harness-demo/web_scraper.py"
+      ],
+      "validation_notes": "Import or run scraper API with network on; check snippet count and max length.",
+      "needs_work_reason": ""
+    },
+    {
+      "id": "T3",
+      "title": "Implement sentiment_tagger.py with maintained library",
+      "requirement_ids": [
+        "R3"
+      ],
+      "acceptance_criteria_ids": [
+        "AC4"
+      ],
+      "depends_on": [
+        "T1"
+      ],
+      "status": "VALIDATED",
+      "files_or_symbols": [
+        "ai-harness-demo/sentiment_tagger.py"
+      ],
+      "validation_notes": "Verify labels come from library output; document model/library in README if downloads apply.",
+      "needs_work_reason": ""
+    },
+    {
+      "id": "T4",
+      "title": "Implement viewer.py table output",
+      "requirement_ids": [
+        "R4"
+      ],
+      "acceptance_criteria_ids": [
+        "AC5"
+      ],
+      "depends_on": [
+        "T2",
+        "T3"
+      ],
+      "status": "VALIDATED",
+      "files_or_symbols": [
+        "ai-harness-demo/viewer.py"
+      ],
+      "validation_notes": "Pipe sample tagged items into viewer; confirm columns and readability on stdout.",
+      "needs_work_reason": ""
+    },
+    {
+      "id": "T5",
+      "title": "Implement main.py end-to-end demo",
+      "requirement_ids": [
+        "R5"
+      ],
+      "acceptance_criteria_ids": [
+        "AC6",
+        "AC7"
+      ],
+      "depends_on": [
+        "T4"
+      ],
+      "status": "VALIDATED",
+      "files_or_symbols": [
+        "ai-harness-demo/main.py"
+      ],
+      "validation_notes": "Run python main.py as documented; confirm exit code 0 and full table; test degraded path if feasible.",
+      "needs_work_reason": ""
+    }
+  ]
+}
